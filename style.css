@@ -1,0 +1,617 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Menu Navigasi */
+nav ul.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Styling baru untuk tombol WhatsApp di navbar */
+.nav-whatsapp-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-whatsapp-button:hover {
+    background-color: #218838;
+}
+
+/* Hero Section */
+.hero-section {
+    /* Ganti 'logo new.jpg' dengan nama file gambar pemandangan yang baru */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 0 20px;
+}
+.hero-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Section General */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+}
+
+.section-tagline {
+    font-size: 1.3em;
+    margin-bottom: 60px;
+    color: #666;
+}
+
+/* Tabs for Tour Categories */
+.tabs-container {
+    margin-bottom: 50px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button:hover:not(.active) {
+    background-color: #d0d0d0;
+}
+
+.tab-button.active {
+    background-color: #28a745;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Tour Grid */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tour-item-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.tour-item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content .rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.card-content .rating i {
+    font-size: 0.9em;
+}
+
+.card-content .tour-type {
+    font-size: 0.8em;
+    color: #777;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Penempatan baru untuk judul dan tombol detail */
+.tour-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tour-header-row h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0;
+    font-weight: 700;
+}
+
+.tour-details-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.tour-details-meta i {
+    margin-right: 5px;
+}
+
+.card-content .description {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    height: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content .price {
+    font-size: 1.4em;
+    color: #007bff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card-content .duration {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.tour-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.book-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.book-button:hover {
+    background-color: #218838;
+}
+
+/* Package Details (Include/Exclude) */
+.details-section {
+    display: none;
+}
+
+/* --- Styling untuk Pop-up (Modal) --- */
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #333;
+}
+
+.modal-content h2 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+}
+
+.info-section h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #28a745;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.info-section h3::before {
+    content: '✅';
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.info-section.exclude h3 {
+    color: #dc3545;
+}
+
+.info-section.exclude h3::before {
+    content: '❌';
+    color: #dc3545;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-section li {
+    font-size: 1em;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Tombol Detail Paket kecil */
+.btn-detail-small {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-detail-small:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* --- Perbaikan Menu Hamburger --- */
+
+/* Sembunyikan tombol hamburger di desktop */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    z-index: 100;
+}
+
+/* Aturan untuk mode mobile */
+@media (max-width: 768px) {
+    /* Tampilkan tombol hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Sembunyikan menu secara default */
+    nav ul.nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    /* Tampilkan menu saat kelas 'active' ditambahkan */
+    nav ul.nav-links.active {
+        display: flex;
+    }
+    
+    /* Atur jarak antar item menu */
+    nav ul.nav-links li {
+        margin: 10px 0;
+        width: 80%; /* Berikan lebar agar rapi */
+        text-align: center;
+    }
+
+    /* Atur tampilan tombol WhatsApp di dalam menu */
+    .nav-whatsapp-button {
+        display: block;
+        width: 100%;
+        padding: 12px 0; /* Atur padding untuk membuatnya lebih besar */
+    }
+}
+
+/* responsive grid dan lainnya tetap sama */
+@media (max-width: 992px) {
+    .tour-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+    .tour-grid {
+        grid-template-columns: 1fr;
+    }
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tab-button {
+        width: 80%;
+    }
+    .modal-content {
+        margin: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .cta-button, .whatsapp-button {
+        font-size: 0.9em;
+        padding: 12px 25px;
+    }
+    .logo img {
+        height: 50px;
+    }
+    .tour-item-card .description {
+        height: auto;
+    }
+    .modal-content {
+        padding: 20px;
+    }
+    .tour-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tour-header-row .btn-detail-small {
+        margin-top: 5px;
+    }
+    /* Mengubah tata letak dan ukuran tombol WhatsApp agar lebih rapi */
+    .tour-actions {
+        flex-direction: column;
+        align-items: center; /* Ubah ke center */
+        gap: 15px; /* Tambahkan jarak */
+    }
+    .book-button {
+        width: auto; /* Hapus lebar paksa */
+        padding: 12px 30px; /* Atur ulang padding untuk ukuran yang pas */
+    }
+}
+
+/* Styling untuk bagian Hubungi Kami */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #343a40;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    color: #6c757d;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.whatsapp-button:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.contact-info {
+    font-size: 1em;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    color: #121212;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+}
